@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--
+Author: Damian Rosenthal
+Creation Date: 2024/08/27
+-->
+<html>
+    <head>
+        <title>Northside Diamond Tools</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="Diamond Tools, Supplier, Northside, Gemstones">
+        <link rel="stylesheet" href="styles//homeStyle.css">
+        <link rel="stylesheet" href="styles//globalStyles.css">
+        <script src="index.js"></script>
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="images//logo.png" alt="company logo">
+            <div class="menu">
+                <button class="menItem">Home</button>
+                <button class="menItem" onclick="redirect('about')">About</button>
+                <button class="menItem" onclick="redirect('contact')">Contact</button>
+                <div class="dropdown">
+                    <button class="cat" onclick="redirect('catalogue')">Catalogue</button>
+                    <div class="catalogue">
+                        <a class="catSelect" onclick="window.location.href='catalogue.html#dops'">Dops</a>
+                        <a class="catSelect" onclick="window.location.href='catalogue.html#polishing'">Polishing</a>
+                        <a class="catSelect" onclick="window.location.href='catalogue.html#liquids'">Liquids</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="cat_container">
+            <div class="Cat-Body">
+                <div class="slider">
+                    <div class="slides">
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <input type="radio" name="radio-btn" id="radio4">
+
+                        <div class="slide first">
+                            <img src="images//GAP12.jpg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="images//GAP20.jpg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="images//GAP66.jpg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="images//liqiuds.jpg" alt="">
+                        </div>
+                        <div class="navigation-auto">
+                            <div class="auto-btn1"></div>
+                            <div class="auto-btn2"></div>
+                            <div class="auto-btn3"></div>
+                            <div class="auto-btn4"></div>
+                        </div>
+                    </div>
+                    <div class="navigation-manual">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        <label for="radio4" class="manual-btn"></label>
+                    </div>
+                </div>
+
+                <h2 class="head cat_text body_text">Catalogue</h2>
+                <p class="desc cat_text body_text">Browse our catalogue of various equipment, tools, and chemicals. Ranging from scales and gem testers, to polishing and cutting equipment.</p>
+                <p class="disclaim cat_text body_text">Prices available upon quotation.</p>
+
+            </div>
+        <button class="browse cat_text body_text">Browse</button>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="about">
+            <h1 class="body_text">Learn About Us</h1>
+            <p class="about_desc body_text">Learn about our companies goal's and vision's.</p>
+            <button onclick="redirect('about')">About</button>
+            <p class="about_desc body_text">Contact us for any queries or questions, or come visit us on-site for specialized assistance.</p>
+            <button onclick="redirect('contact')">Contact</button>
+        </div>
+        <footer>
+            <div class="block">
+                <div class="so_block">
+                    <a href="https://www.facebook.com/northsidediamondtools.co.za/"><img class="socials" src="images//facebook.png" alt="facebook.png"></a>
+                </div>
+            </div>
+            <p class="contacts">sales@northsidediamondtools.co.za</p>
+        </footer>
+    </body>
+</html>
