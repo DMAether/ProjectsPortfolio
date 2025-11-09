@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>About</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles//globalStyles.css">
+        <link rel="stylesheet" href="styles//aboutStyle.css">
+        <script src="aboutScript.js"></script>
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="images//logo.png" alt="company logo">
+            <div class="menu">
+                <button class="menItem" onclick="redirect('index')">Home</button>
+                <button class="menItem">About</button>
+                <button class="menItem" onclick="redirect('contact')">Contact</button>
+                <div class="dropdown">
+                    <button class="cat" onclick="redirect('catalogue')">Catalogue</button>
+                    <div class="catalogue">
+                        <a class="catSelect" onclick="window.location.href='catalogue.html#dops'">Dops</a>
+                        <a class="catSelect" onclick="window.location.href='catalogue.html#polishing'">Polishing</a>
+                        <a class="catSelect" onclick="window.location.href='catalogue.html#liquids'">Liquids</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="who" id="who">
+            <h1 class="text-font">Who we are</h1>
+            <img class="disp_img" src="images//GAP22.jpg" alt="GAP22">
+            <p class="text-font">We are a company that stock and deliver a variety of tools, equipment, and chemicals for various gemology practices. We are focused on giving our clients a wide range of supplies and products at a fair price with timely delivery.</p> 
+        </div>
+        <div class="how hide" id="how">
+            <h1 class="text-font">How we work</h1>
+            <p class="text-font">Our website contains a catalogue of all available items for order, however, prices are on a by-quote basis. Once your cart is completed, the order will be sent to our staff, who will then contact you with a quote for your selected items. Once payment is made, we will begin shipping your order</p>
+        </div>
+        <div class="delivery hide" id="delivery">
+            <h1 class="text-font">Deliveries</h1>
+            <p class="text-font">All deliveries will be subject to a delivery fee, which is calculated along with the quote. Deliveries are either done by employees or through a courier service. Deliveries are limited to Johannesburg</p>
+        </div>
+        <footer>
+            <div class="block">
+                <div class="so_block">
+                    <a href="https://www.facebook.com/northsidediamondtools.co.za/"><img class="socials" src="images//facebook.png" alt="facebook.png"></a>
+                </div>
+            </div>
+            <p class="contacts">sales@northsidediamondtools.co.za</p>
+        </footer>
+    </body>
+</html>

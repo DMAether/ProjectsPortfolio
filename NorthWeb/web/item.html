@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Item</title>
+        <link rel="stylesheet" href="styles//itemStyle.css">
+        <link rel="stylesheet" href="styles//globalStyles.css">
+    </head>
+    <body>
+                <header>
+            <img class="logo" src="images//logo.png" alt="company logo">
+            <div class="menu">
+                <button class="menItem" onclick="redirect('index')">Home</button>
+                <button class="menItem" onclick="redirect('about')">About</button>
+                <button class="menItem" onclick="redirect('contact')">Contact</button>
+                <div class="dropdown">
+                    <button class="cat" onclick="redirect('catalogue')">Catalogue</button>
+                    <div class="catalogue">
+                        <a class="catSelect" onclick="window.location.href='catalogue.html#dops'">Dops</a>
+                        <a class="catSelect" onclick="window.location.href='catalogue.html#polishing'">Polishing</a>
+                        <a class="catSelect" onclick="window.location.href='catalogue.html#liquids'">Liquids</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <h1>
+            US AMERICAN TANG + FLAT BOTTOM DOP        </h1>
+        <div class="item_display">
+            <img class="prod" src="images//catalogue//D353.jpg" alt="item">
+            <div class="info">
+                <p class="desc">
+                    The D353 is the most suitable tool for making large goods on bottom. It is a perfect instrument for making all round and fancy stones from one carat and up.                </p>
+                <div class="info_bottom">
+                    <p class="stock">
+                        17                    </p><p class="remaining">remaining</p>
+                    <p class="price">
+                        R532.40                    </p>
+                    <button class="add" onclick="show()">Add</button>
+                    <button>Cart</button>
+                </div>     
+            </div>  
+        </div>
+	<div class="create" id="create">
+	    <button onclick="hide()">X</button>
+            <h3>Create account</h3>
+            <form id="createDets" onsubmit="submitForm(event)">
+		<input type="hidden" name="action" value="create">
+                <label>name <input id="name" name="name"></label><br><br><br>
+                <label>email <input id="email" name="email"></label><br><br><br>
+		<label>Password <input type="password" id="pass" name="pass"></label><br><br>
+                <label>phone <input id="phone" name="phone"></label>
+                <br><br>
+                <input type="submit" name="Submit" value="Submit">
+            </form>            
+	  
+	    <button onclick="show2()">Login?</button>
+        </div>
+	<div class="create" id="login">
+            <button onclick="hide2()">X</button>
+            <h3>Login</h3>
+            <form id="fetchDets" onsubmit="getForm(event)">
+	        <input type="hidden" name="action" value="login">
+		<input type="hidden" name="data" value=D353>
+                <label>Email <input id="userlogin" name="email"></label><br><br><br>
+                <label>Password <input type="password" id="passlogin" name="pass"></label>
+                <br><br>
+                <input type="submit" name="Submit" value="Submit">            
+	    </form>            
+            <br><br>
+            <button onclick="show()">Create?</button>
+        </div>
+        <div class="create">
+            <button onclick="hide2()">X</button>
+            <p>["US Universal DOP"]</p>
+                        
+            <br><br>
+            
+        </div>
+        <footer>
+            <div class="block">
+                <div class="so_block">
+                    <a href="https://www.facebook.com/northsidediamondtools.co.za/"><img class="socials" src="images//facebook.png" alt="facebook.png"></a>
+                </div>
+            </div>
+            <p class="contacts">sales@northsidediamondtools.co.za</p>
+        </footer>
+    </body>
+    <script>
+	window.onload = function() {
+            hide();
+	    hide2();
+        };
+        
+        function hide(){
+            document.getElementById('create').classList.add('hidden');
+        }
+        
+        function hide2(){
+            document.getElementById('login').classList.add('hidden');
+        }
+        
+        function show(){
+            hide2();
+            document.getElementById('create').classList.remove('hidden');
+        }
+        function show2(){
+            hide();
+            document.getElementById('login').classList.remove('hidden');
+        }
+	function create(){
+		console.log('Not finished');
+	}
+        function submitForm(event){
+            event.preventDefault();
+            var formData = new FormData(document.getElementById('createDets'));
+             fetch('process.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                console.log(data);
+		alert(data);
+            })
+             .catch(error => console.error('Error:', error));
+        }
+
+        function getForm(event) {
+	    console.log("run");
+            event.preventDefault();
+            var formData = new FormData(document.getElementById('fetchDets'));
+             fetch('process.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+		if(data != "fail"){
+                     alert("item added for: " + data);
+		} else alert("Wrong Details");
+            })
+             .catch(error => console.error('Error:', error));
+            
+        }
+
+        function redirect(page) {
+            window.location.replace('./'+ page + '.html');
+        }
+    </script>
+</html>
