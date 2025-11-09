@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="login.css">
+        <style>
+            h1 {
+                font-size: 50px;
+                color: blueviolet;
+                position: relative;
+                left:450px;
+            }
+            input {
+                display: block;
+                border-radius: 5px;
+                font-size: 25px;
+                position: relative;
+                left: 450px;
+                border-color: chartreuse;
+            }
+            button {
+                font-weight: bold;
+                background-color: transparent;
+                border: none;
+                position: relative;
+                left: 550px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Eduvos Chats</h1>
+        <form method="post" action="Login">
+            <input type="text" name="logUser">
+            <br>
+            <input type="password" name="logPass">
+            <button value="submit">Log In</button>
+        </form>
+        <br>
+        <form method="post" action="GoRegister"><button class="register" value="submit">Register?</button></form>
+    </body>
+</html>
